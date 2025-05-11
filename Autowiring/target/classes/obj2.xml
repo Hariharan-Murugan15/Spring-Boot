@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id = "st" class="com.cognizant.Student">
+   		<property name="write1" ref ="pc"></property>
+   		<property name="write2" ref ="p"></property>
+
+   </bean>
+   
+   <bean id ="p" class = "com.cognizant.Pen">
+   
+   </bean>
+   
+   <bean id ="pc" class="com.cognizant.Pencil">
+   
+   </bean>
+   
+   <bean id = "st2" class="com.cognizant.Student2">
+   		<property name="write" ref ="pc"></property>
+   </bean>
+   
+   
+</beans>

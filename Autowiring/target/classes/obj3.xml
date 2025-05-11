@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+                           
+	<!-- AUTOWIRE USING byName -->
+	<bean id = "auto"  class="com.cognizant.AutowireEg" autowire="byName"></bean>
+	<bean id ="writer" class="com.cognizant.Pen"></bean>
+	
+	<!-- AUTOWIRE USING byType -->
+	<bean id = "auto2"  class="com.cognizant.AutowireEg" autowire="byType">
+		<property name="writer" ref="pc"></property>
+	</bean>
+	<bean id ="p" class="com.cognizant.Pen" primary="true"></bean>
+	<bean id="pc"  class="com.cognizant.Pencil" ></bean>
+</beans>

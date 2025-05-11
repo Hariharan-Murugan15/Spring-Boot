@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+   <bean id ="e1" class="com.cognizant.Engine">
+   <property name="engine" value="2 stoke Engine"></property>
+   </bean>
+   
+    <bean id="engine" class="com.cognizant.Engine">
+   <property name="engine" value="4 stoke Engine"></property>
+   </bean>
+   
+    <bean id="car" class="com.cognizant.Car">
+   <property name="model" value="1"></property>
+    <property name="eng" ref="e1"></property>
+   </bean>
+   
+	<bean id="car2" class="com.cognizant.Car" autowire="byName">
+   		<property name="model" value="1"></property>
+    	
+   </bean>
+   
+   
+   <bean id = "st" class="com.cognizant.Student">
+   		<property name="writer" ref ="p"></property>
+   </bean>
+   
+   <bean id ="p" class = "com.cognizant.Pen">
+   
+   </bean>
+   
+   <bean id ="pc" class="com.cognizant.Pencil">
+   
+   </bean>
+   
+   
+</beans>
